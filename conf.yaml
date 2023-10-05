@@ -1,315 +1,314 @@
 appConfig:
-  statusCheck: false
-  theme: charry-blossom
-  fontAwesomeKey: c94dc2b452
-  customCss: '.clock p.time { font-size: 3rem !important; }'
-  layout: vertical
-  iconSize: small
   auth:
     users:
-      - user: adam
-        hash: HASH_HERE
-        type: admin
+    - hash: 286A3D054BA70AD48F62B506E87202C1CF18F0A856AD5AB0E0909A79E2D4E5FC
+      type: admin
+      user: adam
+  customCss: '.clock p.time { font-size: 3rem !important; }'
+  fontAwesomeKey: c94dc2b452
+  iconSize: small
   language: en
+  layout: vertical
+  statusCheck: false
+  theme: charry-blossom
   webSearch:
-    searchEngine: 'duckduckgo'  # Keeping DuckDuckGo as the default search engine
-    openingMethod: 'sametab'
+    openingMethod: sametab
     searchBangs:
-      /w: 'https://search.adamgerges.com/search?q='  
+      /w: URL_REMOVED
+    searchEngine: duckduckgo
 pageInfo:
-  title: Hello, Adam
   description: Personal browser startpage
-  navLinks:
-    - title: Odoo.sh
-      path: https://www.odoo.sh/project
-      target: newtab
-    - title: Rooted Odoo
-      path: https://my.rootedadvisors.ca/
-      target: newtab
-    - title: Uptime
-      path: https://my.rootedadvisors.ca/
-      target: newtab
   footerText: ''
-  #logo: https://i.ibb.co/71WyyzM/little-bot-3.png
+  navLinks:
+  - path: URL_REMOVED
+    target: newtab
+    title: Odoo.sh
+  - path: URL_REMOVED
+    target: newtab
+    title: Rooted Odoo
+  - path: URL_REMOVED
+    target: newtab
+    title: Uptime
+  title: Hello, Adam
 sections:
-  - name: Today
-    icon: far fa-smile-beam
-    displayData:
-      collapsed: false
-      hideForGuests: false
-    widgets:
-      - type: clock
-        id: 0_513_clock
-      - type: weather
-        options:
-          apiKey: API_KEY_HERE
-          city: Vancouver
-        id: 1_513_weather
-      - type: exchange-rates
-        options:
-          apiKey: API_KEY_HERE
-          inputCurrency: CAD
-          outputCurrencies:
-            - USD
-            - GBP
-            - EUR
-            - CHF
-            - JPY
-            - AUD
-            - CNY
-            - INR
-            - BRL
-            - MXN
-            - NZD
-            - ZAR
-            - SGD
-        id: 2_513_exchangerates
-      - type: public-ip
-        options:
-          provider: ipgeolocation
-          apiKey: API_KEY_HERE
-        id: 3_513_publicip
-      - type: custom-search
-        options:
-          placeholder: Search the web
-          engines:
-            - title: Whoogle
-              url: https://search.adamgerges.com/search?q=
-            - title: DuckDuckGo
-              url: https://duckduckgo.com/?q=
-            - title: Google
-              url: https://www.google.com/search?q=
-            - title: Google Images
-              url: https://www.google.com/search?tbm=isch&q=
-            - title: Google Maps
-              url: https://www.google.com/maps/search/?api=1&query=
-        id: 0_1139_customsearch
-  - name: Live News
-    icon: fas fa-newspaper
-    widgets:
-      - type: news-headlines
-        options:
-          apiKey: XQCIbGFouywNvvIMVEiHL96P5hAptq--uv4026F4Wf3mkC7o
-          category: world
-          country: CA
-          hideImages: true
-          count: 8
-        id: 0_845_newsheadlines
-  - name: Social & News
-    icon: far fa-thumbs-up
-    items:
-      - title: Facebook
-        icon: si-facebook
-        url: https://www.facebook.com/
-        id: 0_1118_facebook
-      - title: WhatsApp
-        icon: si-whatsapp
-        url: https://web.whatsapp.com/
-        id: 1_1118_whatsapp
-      - title: Reddit
-        icon: si-reddit
-        url: https://www.reddit.com/
-        id: 2_1118_reddit
-      - title: Twitter
-        icon: si-twitter
-        url: https://twitter.com/
-        id: 3_1118_twitter
-      - title: YouTube
-        icon: si-youtube
-        url: https://youtube.com/
-        id: 4_1118_youtube
-      - title: Instagram
-        icon: si-instagram
-        url: https://www.instagram.com/
-        id: 5_1118_instagram
-      - title: News
-        icon: si-bbc
-        url: https://bbc.co.uk/news
-        id: 6_1118_news
-      - title: Global Canada
-        icon: si-feedly
-        url: https://globalnews.ca/
-        id: 7_1118_globalcanada
-      - title: Crypto Prices
-        icon: fab fa-bitcoin
-        url: https://www.livecoinwatch.com/
-        description: Real-time crypto prices and read-only portfolio
-        provider: Live Coin Watch
-        id: 8_1118_cryptoprices
-  - name: Productivity
-    icon: far fa-briefcase
-    items:
-      - title: ProtonMail
-        icon: favicon
-        url: https://mail.protonmail.com/
-        description: Primary email account
-        tags:
-          - hosted
-          - personal
-          - email
-          - mail
-        hotkey: 1
-        id: 0_1302_protonmail
-      - title: Gmail
-        description: Gmail email account
-        icon: favicon
-        url: https://mail.google.com/
-        hotkey: 2
-        tags:
-          - hosted
-          - personal
-          - email
-          - mail
-        id: 1_1302_gmail
-      - title: MaskedEmail
-        description: Mail alias forwarder
-        icon: favicon
-        url: https://app.mymasked.email/
-        hotkey: 3
-        tags:
-          - hosted
-          - personal
-          - forwarder
-          - aliases
-          - email
-        statusCheckAcceptCodes: '401'
-        id: 2_1302_maskedemail
-      - title: RootedLinkShortener
-        description: Deterministic password generator
-        icon: favicon
-        url: https://admin.rootedadvisors.link/
-        hotkey: 4
-        tags:
-          - hosted
-          - personal
-          - password
-          - generate
-          - deterministic
-        statusCheck: true
-        id: 3_1302_rootedlinkshortener
-      - title: RootedFileShare
-        description: Online Private File Share
-        icon: favicon
-        url: https://rootedadvisors.link
-        hotkey: 5
-        statusCheck: true
-        id: 4_1302_rootedfileshare
-      - title: Office 365
-        description: Office 365 Login
-        icon: favicon
-        url: https://www.office.com/
-        hotkey: 6
-        id: 5_1302_office
-      - title: QuickBooks
-        description: QuickBooks Online
-        icon: favicon
-        url: https://quickbooks.intuit.com/ca/
-        hotkey: 7
-        tags:
-          - hosted
-          - personal
-          - files
-          - backup
-          - sync
-          - storage
-        id: 6_1302_quickbooks
-      - title: Atera
-        description: Remote RMM Tools
-        icon: favicon
-        url: https://app.atera.com/
-        hotkey: 8
-        id: 7_1302_atera
-      - title: 1Password
-        icon: favicon
-        url: https://my.1password.com/
-        description: Password Manager
-        tags:
-          - hosted
-          - personal
-          - passwords
-        hotkey: 9
-        id: 8_1302_password
-      - title: Odoo Instances
-        subItems:
-          - title: "FME - Staging"
-            url: https://staging.fmefoodmachinery.com
-            icon: fas fa-code-branch
-            color: '#122c9a'
-          - title: "FME - Production"
-            url: https://portal.fmefoodmachinery.com/
-            icon: fas fa-cogs
-            color: '#122c9a'
-          - title: "FME - Training"
-            url: https://training.fmefoodmachinery.com/
-            icon: fas fa-chalkboard-teacher
-            color: '#122c9a'
-          - title: "VHLA - Staging"
-            url: https://staging.vhlamedia.com/
-            icon: fas fa-code-branch
-            color: '#7af7b0'
-          - title: "VHLA - Production"
-            url: https://my.vhlamedia.com/
-            icon: fas fa-cogs
-            color: '#7af7b0'
-        id: 7_893_documentation
-  - name: Dev & Cloud
-    icon: far fa-code
-    items:
-      - title: GitHub
-        icon: favicon
-        url: https://github.com/
-        id: 0_892_github
-      - title: StackOverflow
-        icon: favicon
-        url: http://stackoverflow.com/
-        id: 1_892_stackoverflow
-      - title: CloudFlare
-        icon: favicon
-        url: https://dash.cloudflare.com/
-        statusCheckAcceptCodes: '403'
-        id: 2_892_cloudflare
-      - title: DigitalOcean
-        icon: favicon
-        url: https://cloud.digitalocean.com/
-        id: 3_892_digitalocean
-      - title: AWS
-        icon: favicon
-        url: https://signin.aws.amazon.com/
-        id: 4_892_aws
-      - title: RackNerd
-        description: Billing Dashboard
-        icon: favicon
-        url: https://my.racknerd.com/index.php?rp=/login
-        id: 5_892_racknerd
-      - title: NerdVMs
-        description: 'VM Control '
-        icon: favicon
-        url: https://nerdvm.racknerd.com/login.php
-        id: 6_892_nerdvms
-      - title: Documentation
-        subItems:
-          - title: JavaScript
-            url: https://developer.mozilla.org
-            icon: si-javascript
-            color: '#F7DF1E'
-          - title: TypeScript
-            url: https://www.typescriptlang.org/docs
-            icon: si-typescript
-            color: '#3178C6'
-          - title: Svelt
-            url: https://svelte.dev/docs
-            icon: si-svelte
-            color: '#FF3E00'
-          - title: Go
-            url: https://go.dev/doc
-            icon: si-go
-            color: '#00ADD8'
-          - title: Rust
-            url: https://doc.rust-lang.org/reference
-            icon: si-rust
-            color: '#000000'
-          - title: Docker
-            url: https://docs.docker.com/
-            icon: si-docker
-            color: '#2496ED'
-        id: 7_892_documentation
+- displayData:
+    collapsed: false
+    hideForGuests: false
+  icon: far fa-smile-beam
+  name: Today
+  widgets:
+  - id: 0_513_clock
+    type: clock
+  - id: 1_513_weather
+    options:
+      apiKey: efdbade728b37086877a5e83442004db
+      city: Vancouver
+    type: weather
+  - id: 2_513_exchangerates
+    options:
+      apiKey: 15db6e06d08625fc72474724
+      inputCurrency: CAD
+      outputCurrencies:
+      - USD
+      - GBP
+      - EUR
+      - CHF
+      - JPY
+      - AUD
+      - CNY
+      - INR
+      - BRL
+      - MXN
+      - NZD
+      - ZAR
+      - SGD
+    type: exchange-rates
+  - id: 3_513_publicip
+    options:
+      apiKey: b54633d3bb39438fb073b97270879083
+      provider: ipgeolocation
+    type: public-ip
+  - id: 0_1139_customsearch
+    options:
+      engines:
+      - title: Whoogle
+        url: https://search.adamgerges.com/search?q=
+      - title: DuckDuckGo
+        url: https://duckduckgo.com/?q=
+      - title: Google
+        url: https://www.google.com/search?q=
+      - title: Google Images
+        url: https://www.google.com/search?tbm=isch&q=
+      - title: Google Maps
+        url: https://www.google.com/maps/search/?api=1&query=
+      placeholder: Search the web
+    type: custom-search
+- icon: fas fa-newspaper
+  name: Live News
+  widgets:
+  - id: 0_845_newsheadlines
+    options:
+      apiKey: XQCIbGFouywNvvIMVEiHL96P5hAptq--uv4026F4Wf3mkC7o
+      category: world
+      count: 8
+      country: CA
+      hideImages: true
+    type: news-headlines
+- icon: far fa-thumbs-up
+  items:
+  - icon: si-facebook
+    id: 0_1118_facebook
+    title: Facebook
+    url: https://www.facebook.com/
+  - icon: si-whatsapp
+    id: 1_1118_whatsapp
+    title: WhatsApp
+    url: https://web.whatsapp.com/
+  - icon: si-reddit
+    id: 2_1118_reddit
+    title: Reddit
+    url: https://www.reddit.com/
+  - icon: si-twitter
+    id: 3_1118_twitter
+    title: Twitter
+    url: https://twitter.com/
+  - icon: si-youtube
+    id: 4_1118_youtube
+    title: YouTube
+    url: https://youtube.com/
+  - icon: si-instagram
+    id: 5_1118_instagram
+    title: Instagram
+    url: https://www.instagram.com/
+  - icon: si-bbc
+    id: 6_1118_news
+    title: News
+    url: https://bbc.co.uk/news
+  - icon: si-feedly
+    id: 7_1118_globalcanada
+    title: Global Canada
+    url: https://globalnews.ca/
+  - description: Real-time crypto prices and read-only portfolio
+    icon: fab fa-bitcoin
+    id: 8_1118_cryptoprices
+    provider: Live Coin Watch
+    title: Crypto Prices
+    url: https://www.livecoinwatch.com/
+  name: Social & News
+- icon: far fa-briefcase
+  items:
+  - description: Primary email account
+    hotkey: 1
+    icon: favicon
+    id: 0_1302_protonmail
+    tags:
+    - hosted
+    - personal
+    - email
+    - mail
+    title: ProtonMail
+    url: https://mail.protonmail.com/
+  - description: Gmail email account
+    hotkey: 2
+    icon: favicon
+    id: 1_1302_gmail
+    tags:
+    - hosted
+    - personal
+    - email
+    - mail
+    title: Gmail
+    url: https://mail.google.com/
+  - description: Mail alias forwarder
+    hotkey: 3
+    icon: favicon
+    id: 2_1302_maskedemail
+    statusCheckAcceptCodes: '401'
+    tags:
+    - hosted
+    - personal
+    - forwarder
+    - aliases
+    - email
+    title: MaskedEmail
+    url: https://app.mymasked.email/
+  - description: Deterministic password generator
+    hotkey: 4
+    icon: favicon
+    id: 3_1302_rootedlinkshortener
+    statusCheck: true
+    tags:
+    - hosted
+    - personal
+    - password
+    - generate
+    - deterministic
+    title: RootedLinkShortener
+    url: https://admin.rootedadvisors.link/
+  - description: Online Private File Share
+    hotkey: 5
+    icon: favicon
+    id: 4_1302_rootedfileshare
+    statusCheck: true
+    title: RootedFileShare
+    url: https://rootedadvisors.link
+  - description: Office 365 Login
+    hotkey: 6
+    icon: favicon
+    id: 5_1302_office
+    title: Office 365
+    url: https://www.office.com/
+  - description: QuickBooks Online
+    hotkey: 7
+    icon: favicon
+    id: 6_1302_quickbooks
+    tags:
+    - hosted
+    - personal
+    - files
+    - backup
+    - sync
+    - storage
+    title: QuickBooks
+    url: https://quickbooks.intuit.com/ca/
+  - description: Remote RMM Tools
+    hotkey: 8
+    icon: favicon
+    id: 7_1302_atera
+    title: Atera
+    url: https://app.atera.com/
+  - description: Password Manager
+    hotkey: 9
+    icon: favicon
+    id: 8_1302_password
+    tags:
+    - hosted
+    - personal
+    - passwords
+    title: 1Password
+    url: https://my.1password.com/
+  - id: 7_893_documentation
+    subItems:
+    - color: '#122c9a'
+      icon: fas fa-code-branch
+      title: FME - Staging
+      url: https://staging.fmefoodmachinery.com
+    - color: '#122c9a'
+      icon: fas fa-cogs
+      title: FME - Production
+      url: https://portal.fmefoodmachinery.com/
+    - color: '#122c9a'
+      icon: fas fa-chalkboard-teacher
+      title: FME - Training
+      url: https://training.fmefoodmachinery.com/
+    - color: '#7af7b0'
+      icon: fas fa-code-branch
+      title: VHLA - Staging
+      url: https://staging.vhlamedia.com/
+    - color: '#7af7b0'
+      icon: fas fa-cogs
+      title: VHLA - Production
+      url: https://my.vhlamedia.com/
+    title: Odoo Instances
+  name: Productivity
+- icon: far fa-code
+  items:
+  - icon: favicon
+    id: 0_892_github
+    title: GitHub
+    url: https://github.com/
+  - icon: favicon
+    id: 1_892_stackoverflow
+    title: StackOverflow
+    url: http://stackoverflow.com/
+  - icon: favicon
+    id: 2_892_cloudflare
+    statusCheckAcceptCodes: '403'
+    title: CloudFlare
+    url: https://dash.cloudflare.com/
+  - icon: favicon
+    id: 3_892_digitalocean
+    title: DigitalOcean
+    url: https://cloud.digitalocean.com/
+  - icon: favicon
+    id: 4_892_aws
+    title: AWS
+    url: https://signin.aws.amazon.com/
+  - description: Billing Dashboard
+    icon: favicon
+    id: 5_892_racknerd
+    title: RackNerd
+    url: https://my.racknerd.com/index.php?rp=/login
+  - description: 'VM Control '
+    icon: favicon
+    id: 6_892_nerdvms
+    title: NerdVMs
+    url: https://nerdvm.racknerd.com/login.php
+  - id: 7_892_documentation
+    subItems:
+    - color: '#F7DF1E'
+      icon: si-javascript
+      title: JavaScript
+      url: https://developer.mozilla.org
+    - color: '#3178C6'
+      icon: si-typescript
+      title: TypeScript
+      url: https://www.typescriptlang.org/docs
+    - color: '#FF3E00'
+      icon: si-svelte
+      title: Svelt
+      url: https://svelte.dev/docs
+    - color: '#00ADD8'
+      icon: si-go
+      title: Go
+      url: https://go.dev/doc
+    - color: '#000000'
+      icon: si-rust
+      title: Rust
+      url: https://doc.rust-lang.org/reference
+    - color: '#2496ED'
+      icon: si-docker
+      title: Docker
+      url: https://docs.docker.com/
+    title: Documentation
+  name: Dev & Cloud
